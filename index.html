@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>EncriptJS</title>
+</head>
+<body>
+
+<div class="container">
+<div class="izq">
+    <div class="logo-container">
+        <img src="../assets/Logo.svg" alt="Alura logo" class="logo">
+    </div>
+<div>
+    <textarea class="text" placeholder="Ingrese el texto aquí"></textarea>
+</div>
+    <div class="userInput">
+        <div class="area-buttons">
+            <small class="alert-user"> Solo letras minúsculas y sin acentos</small>
+            <button class="encript button" id="encriptar">Encriptar</button>
+            <button class="descr button" id="desencriptar">desencriptar</button>
+        </div>
+    </div>
+</div>
+    <div class="der">
+    <div class="output">
+       
+        <div class="emp">
+            <div class="mu-cont">
+                <img src="./assets/Muñeco.svg" alt="mujer buscando">
+                <div class="lett">
+                    <p class="flett">Ningún mensaje fue encontrado</p>
+                    <p class="seclett">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+        </div>
+        <div class="result hidden" id="resultcontent">
+            <textarea  class="text2" id="output"></textarea>
+            <button class="descr button" id="copy">Copiar</button>
+    </div>
+     
+</div>
+</div>
+
+</div>
+
+    <script src="js/base.js"></script>
+</body>
+</html>

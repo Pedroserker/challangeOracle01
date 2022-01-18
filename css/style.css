@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+:root{
+    --primario: #1073BA;
+    --secundario: #00DA55;
+    --gris: #495057;
+    --blanco: #FFFFFF;
+    --negro: #1F1E1E;
+    --grisClaro: #e1e1e1;
+    --funtePrincipal: 'Inter',sans-serif;
+
+}
+body{
+    background-color: rgb(243,245,252);
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2rem;
+}
+.izq{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.izq .logo-container{
+    width: 2rem;
+    height: 2rem;
+}
+/*Utils*/
+
+.izq .userInput{
+
+}
+.userInput{
+padding: 3rem;
+margin-left: 2rem;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+.output{
+    grid-column: 3/4;
+    width: 40rem;
+    height: 64rem;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    padding:0 3rem;
+}
+.result{
+    height: 90%;
+    padding: 3rem;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.copy{
+
+    
+}
+.emp{
+
+    padding-top: 10rem;
+}
+.result{
+
+    
+
+}
+
+.mu-cont{
+    margin: auto;
+}
+.lett{
+    text-align: center;
+}
+
+.lett .flett{
+    font-family: var(--funtePrincipal);
+    font-weight: bold;
+    font-size: 24px;
+    
+}
+.lett .seclett {
+    font-family: var(--funtePrincipal);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gris);
+}
+.alert-user{
+    display: block;
+    margin-bottom: 1.2rem;
+}
+.button{
+    outline: none;
+    border: none;
+    font-family: var(--funtePrincipal);
+    width: 32rem;
+    height: 6.7rem;
+    border-radius: 24px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.button:active{
+    transform: scale(0.9);
+    transition: transform  .3s ease-out;
+}
+.text{
+    margin-left: 4.3rem;
+    width: 90%;
+    height: 35rem;
+    background-color: transparent;
+    color: #0A3871;
+    font-size: 3rem;
+    resize: none;
+    outline: none;
+    border: none;
+    
+}
+.text2{
+    margin-left: 1.3rem;
+    width: 90%;
+    height: 35rem;
+    background-color: transparent;
+    color: #0A3871;
+    font-size: 3rem;
+    resize: none;
+    outline: none;
+    border: none;
+    
+}
+.text:target{
+    border: none;
+}
+.text::placeholder{
+    font-size: 3rem;
+    color: #0A3871;
+}
+.encript{
+    
+    color:#FFFFFF;
+    background: #0A3871;
+
+}
+.descr{
+    margin-left: 2rem;
+    background: #D8DFE8;
+border: 1px solid #0A3871;
+color:#0A3871;
+}
+
+.alert-user{
+    margin-left: 1.3rem;
+    font-family: var(--funtePrincipal);
+    font-size: 0.9rem;
+    position: relative;
+}
+.alert-user::before{
+    position: absolute;
+    content: url("../assets/Vector.svg");
+    width: 1rem;
+    left: -20px;
+    top: -2px;;
+}
+.icon-alert{
+   display: inline;
+    
+}
+
+.hidden{
+    display: none;
+
+}
