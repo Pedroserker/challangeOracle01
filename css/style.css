@@ -33,9 +33,6 @@ body{
     padding-bottom: 1rem;
 }
 
-.logo img::after{
-    content: "Pedro";
-}
 .inputUser{
     width: 100%;
     grid-row: 2 / 3 ;
