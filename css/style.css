@@ -31,6 +31,14 @@ body{
 .logo{
     grid-row: 1 / 2;
     padding-bottom: 1rem;
+
+}
+@media (min-width:1000px){
+    .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
 }
 
 .inputUser{
@@ -51,7 +59,15 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-
+.author{
+    align-self: center;
+    margin-top: 1rem;
+    font-family: var(--funtePrincipal);
+    text-decoration: none;
+}
+.author span img{
+ width: 0.9rem;   
+}
 @media (min-width:1000px){ 
     .user-buttons{
         grid-column: 2 / 3;
@@ -295,7 +311,7 @@ body{
 
 
   
-  /* Works on Chrome, Edge, and Safari */
+  /****/
   *::-webkit-scrollbar {
     width: 0.3rem;
   }
