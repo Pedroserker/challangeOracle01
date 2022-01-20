@@ -11,41 +11,37 @@
 <body>
 
 <div class="container">
-<div class="izq">
-    <div class="logo-container">
+    <div class="logo">
         <img src="../assets/Logo.svg" alt="Alura logo" class="logo">
     </div>
-<div>
-    <textarea class="text" placeholder="Ingrese el texto aquí"></textarea>
-</div>
-    <div class="userInput">
-        <div class="area-buttons">
-            <small class="alert-user"> Solo letras minúsculas y sin acentos</small>
-            <button class="encript button" id="encriptar">Encriptar</button>
-            <button class="descr button" id="desencriptar">desencriptar</button>
-        </div>
+
+    <div class="inputUser">
+        <textarea class="text" placeholder="Ingrese el texto aquí" id="input"></textarea>
     </div>
-</div>
-    <div class="der">
-    <div class="output">
-       
-        <div class="emp">
-            <div class="mu-cont">
+
+    <div class="user-buttons">
+                <small class="alert-user"> Solo letras minúsculas y sin acentos</small>
+                <div class="button-group">
+                    <button class="encript button" id="encriptar">Encriptar</button>
+                    <button class="descr button" id="desencriptar">Desencriptar</button>
+                </div>
+    </div>
+
+    <div class="container-left">
+        <div class="card">
+            <div class="lookingfor">
                 <img src="./assets/Muñeco.svg" alt="mujer buscando">
                 <div class="lett">
                     <p class="flett">Ningún mensaje fue encontrado</p>
                     <p class="seclett">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
             </div>
+            <div class="result hidden" id="resultcontent">
+                <textarea  class="text" id="output"></textarea>
+                <button class="descr button" id="copy">Copiar</button>
         </div>
-        <div class="result hidden" id="resultcontent">
-            <textarea  class="text2" id="output"></textarea>
-            <button class="descr button" id="copy">Copiar</button>
+        </div>
     </div>
-     
-</div>
-</div>
-
 </div>
 
     <script src="js/base.js"></script>

@@ -13,31 +13,66 @@ const REVERSE = {
 "ufat":"u"
 };
 
-let firtv = document.querySelector(".emp");
-let output = document.querySelector("#output");
-let encript = document.querySelector("#encriptar");
+let lookinfor = document.querySelector(".lookingfor");
 let contenido = document.querySelector("#resultcontent");
-let copy = document.querySelector("#copy");
+
+let encript = document.querySelector("#encriptar");
+
 let desencriptar = document.querySelector("#desencriptar");
 
+//entrada y salida
+let textoUser = document.querySelector("#input");
+let output = document.querySelector("#output");
+//copiar al portapapeles
+let copy = document.querySelector("#copy");
+//Validador de entrada
+let ok = false;
+
 encript.addEventListener("click",(e)=>{
-    firtv.classList.add("hidden");
-    contenido.classList.remove("hidden");
-    let textoUser = document.querySelector("textarea");
-    let val = textoUser.value.replace(/[aeiou]/g,(element)=>SECRET[element] || element);
-    output.value = val;
+    console.log(textoUser.value.trim().length);
+    if(!(textoUser.value.trim().length === 0) && ok)
+    {
+        
+        lookinfor.classList.add("hidden");
+        contenido.classList.remove("hidden");
+        let val = textoUser.value.replace(/[aeiou]/g,(element)=>SECRET[element] || element);
+        output.value = val;
+    }
+    else{
+        contenido.classList.add("hidden");
+        lookinfor.classList.remove("hidden");
+        alert("¡La entrada es incorrecta o vacia!")
+    }
+
 });
 
 
 copy.addEventListener("click",()=>{
     output.select();
     document.execCommand("copy");
+    textoUser.focus();
     alert("Texto copiado al portapapeles");
 });
 
 desencriptar.addEventListener("click",()=>{
-    let textoUser = document.querySelector("textarea");
+    
+    if(!(textoUser.value.trim().length === 0) && ok)
+    {
+
+    lookinfor.classList.add("hidden");
+    contenido.classList.remove("hidden");
     let val = textoUser.value.replace(/(ai|enter|imes|ober|ufat)/g,(element)=>REVERSE[element] || element);
-    alert(val);
     output.value = val;
+    }
+    else{
+        contenido.classList.add("hidden");
+        firtv.classList.remove("hidden");
+        alert("¡La entrada es incorrecta o vacia!")
+    }
 });
+
+
+textoUser.addEventListener("change",(e)=>{
+
+     ok = Boolean(e.target.value.match(/^[a-z\s]*$/g));
+})
